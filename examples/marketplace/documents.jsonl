@@ -1,0 +1,180 @@
+{"id": "item-00-0", "title": "Noise cancelling headphones", "body": "Active circuitry suppresses surrounding noise while playing music.", "kind": "product", "category": "topic_00", "rating": 4.6, "price": 100}
+{"id": "item-00-1", "title": "Noise cancelling headphones Plus", "body": "Active circuitry suppresses surrounding noise while playing music.", "kind": "product", "category": "topic_00", "rating": 4.6, "price": 125}
+{"id": "item-00-2", "title": "Noise cancelling headphones Compact", "body": "Active circuitry suppresses surrounding noise while playing music.", "kind": "product", "category": "topic_00", "rating": 4.6, "price": 150}
+{"id": "item-00-3", "title": "Gaming headphones", "body": "Microphone and spatial sound for multiplayer games.", "kind": "product", "category": "topic_00", "rating": 3.5, "price": 175}
+{"id": "item-00-4", "title": "Gaming headphones Plus", "body": "Microphone and spatial sound for multiplayer games.", "kind": "product", "category": "topic_00", "rating": 3.5, "price": 200}
+{"id": "item-00-5", "title": "Gaming headphones Compact", "body": "Microphone and spatial sound for multiplayer games.", "kind": "product", "category": "topic_00", "rating": 3.5, "price": 225}
+{"id": "item-01-0", "title": "AC repair technician", "body": "Diagnose faults in cooling units and restore refrigeration.", "kind": "service", "category": "topic_01", "rating": 4.6, "price": 100}
+{"id": "item-01-1", "title": "AC repair technician Plus", "body": "Diagnose faults in cooling units and restore refrigeration.", "kind": "service", "category": "topic_01", "rating": 4.6, "price": 125}
+{"id": "item-01-2", "title": "AC repair technician Compact", "body": "Diagnose faults in cooling units and restore refrigeration.", "kind": "service", "category": "topic_01", "rating": 4.6, "price": 150}
+{"id": "item-01-3", "title": "AC installation", "body": "Mount brand new cooling units in newly built homes.", "kind": "service", "category": "topic_01", "rating": 3.5, "price": 175}
+{"id": "item-01-4", "title": "AC installation Plus", "body": "Mount brand new cooling units in newly built homes.", "kind": "service", "category": "topic_01", "rating": 3.5, "price": 200}
+{"id": "item-01-5", "title": "AC installation Compact", "body": "Mount brand new cooling units in newly built homes.", "kind": "service", "category": "topic_01", "rating": 3.5, "price": 225}
+{"id": "item-02-0", "title": "Bluetooth earbuds", "body": "Wireless earpieces stream songs from a smartphone.", "kind": "product", "category": "topic_02", "rating": 4.6, "price": 100}
+{"id": "item-02-1", "title": "Bluetooth earbuds Plus", "body": "Wireless earpieces stream songs from a smartphone.", "kind": "product", "category": "topic_02", "rating": 4.6, "price": 125}
+{"id": "item-02-2", "title": "Bluetooth earbuds Compact", "body": "Wireless earpieces stream songs from a smartphone.", "kind": "product", "category": "topic_02", "rating": 4.6, "price": 150}
+{"id": "item-02-3", "title": "Wired earphones", "body": "Analog cable connects directly to a headphone socket.", "kind": "product", "category": "topic_02", "rating": 3.5, "price": 175}
+{"id": "item-02-4", "title": "Wired earphones Plus", "body": "Analog cable connects directly to a headphone socket.", "kind": "product", "category": "topic_02", "rating": 3.5, "price": 200}
+{"id": "item-02-5", "title": "Wired earphones Compact", "body": "Analog cable connects directly to a headphone socket.", "kind": "product", "category": "topic_02", "rating": 3.5, "price": 225}
+{"id": "item-03-0", "title": "Distributed database handbook", "body": "Replication and consensus preserve records across servers during failures.", "kind": "document", "category": "topic_03", "rating": 4.6, "price": 100}
+{"id": "item-03-1", "title": "Distributed database handbook Plus", "body": "Replication and consensus preserve records across servers during failures.", "kind": "document", "category": "topic_03", "rating": 4.6, "price": 125}
+{"id": "item-03-2", "title": "Distributed database handbook Compact", "body": "Replication and consensus preserve records across servers during failures.", "kind": "document", "category": "topic_03", "rating": 4.6, "price": 150}
+{"id": "item-03-3", "title": "Database beginner guide", "body": "Introduction to tables and basic select statements.", "kind": "document", "category": "topic_03", "rating": 3.5, "price": 175}
+{"id": "item-03-4", "title": "Database beginner guide Plus", "body": "Introduction to tables and basic select statements.", "kind": "document", "category": "topic_03", "rating": 3.5, "price": 200}
+{"id": "item-03-5", "title": "Database beginner guide Compact", "body": "Introduction to tables and basic select statements.", "kind": "document", "category": "topic_03", "rating": 3.5, "price": 225}
+{"id": "item-04-0", "title": "Plumber leak repair", "body": "Fix leaking pipes and dripping taps in bathrooms.", "kind": "service", "category": "topic_04", "rating": 4.6, "price": 100}
+{"id": "item-04-1", "title": "Plumber leak repair Plus", "body": "Fix leaking pipes and dripping taps in bathrooms.", "kind": "service", "category": "topic_04", "rating": 4.6, "price": 125}
+{"id": "item-04-2", "title": "Plumber leak repair Compact", "body": "Fix leaking pipes and dripping taps in bathrooms.", "kind": "service", "category": "topic_04", "rating": 4.6, "price": 150}
+{"id": "item-04-3", "title": "Bathroom cleaning", "body": "Remove grime and polish sinks and tiles.", "kind": "service", "category": "topic_04", "rating": 3.5, "price": 175}
+{"id": "item-04-4", "title": "Bathroom cleaning Plus", "body": "Remove grime and polish sinks and tiles.", "kind": "service", "category": "topic_04", "rating": 3.5, "price": 200}
+{"id": "item-04-5", "title": "Bathroom cleaning Compact", "body": "Remove grime and polish sinks and tiles.", "kind": "service", "category": "topic_04", "rating": 3.5, "price": 225}
+{"id": "item-05-0", "title": "Robot vacuum cleaner", "body": "Automatically collect dust from floors without manual sweeping.", "kind": "product", "category": "topic_05", "rating": 4.6, "price": 100}
+{"id": "item-05-1", "title": "Robot vacuum cleaner Plus", "body": "Automatically collect dust from floors without manual sweeping.", "kind": "product", "category": "topic_05", "rating": 4.6, "price": 125}
+{"id": "item-05-2", "title": "Robot vacuum cleaner Compact", "body": "Automatically collect dust from floors without manual sweeping.", "kind": "product", "category": "topic_05", "rating": 4.6, "price": 150}
+{"id": "item-05-3", "title": "Steam mop", "body": "Hand operated device sanitizes hard floors with vapor.", "kind": "product", "category": "topic_05", "rating": 3.5, "price": 175}
+{"id": "item-05-4", "title": "Steam mop Plus", "body": "Hand operated device sanitizes hard floors with vapor.", "kind": "product", "category": "topic_05", "rating": 3.5, "price": 200}
+{"id": "item-05-5", "title": "Steam mop Compact", "body": "Hand operated device sanitizes hard floors with vapor.", "kind": "product", "category": "topic_05", "rating": 3.5, "price": 225}
+{"id": "item-06-0", "title": "Password manager", "body": "Encrypt account credentials and fill secure logins.", "kind": "product", "category": "topic_06", "rating": 4.6, "price": 100}
+{"id": "item-06-1", "title": "Password manager Plus", "body": "Encrypt account credentials and fill secure logins.", "kind": "product", "category": "topic_06", "rating": 4.6, "price": 125}
+{"id": "item-06-2", "title": "Password manager Compact", "body": "Encrypt account credentials and fill secure logins.", "kind": "product", "category": "topic_06", "rating": 4.6, "price": 150}
+{"id": "item-06-3", "title": "Text editor", "body": "Write and format plain text notes.", "kind": "product", "category": "topic_06", "rating": 3.5, "price": 175}
+{"id": "item-06-4", "title": "Text editor Plus", "body": "Write and format plain text notes.", "kind": "product", "category": "topic_06", "rating": 3.5, "price": 200}
+{"id": "item-06-5", "title": "Text editor Compact", "body": "Write and format plain text notes.", "kind": "product", "category": "topic_06", "rating": 3.5, "price": 225}
+{"id": "item-07-0", "title": "Bicycle puncture service", "body": "Patch flat tires and replace damaged tubes on cycles.", "kind": "service", "category": "topic_07", "rating": 4.6, "price": 100}
+{"id": "item-07-1", "title": "Bicycle puncture service Plus", "body": "Patch flat tires and replace damaged tubes on cycles.", "kind": "service", "category": "topic_07", "rating": 4.6, "price": 125}
+{"id": "item-07-2", "title": "Bicycle puncture service Compact", "body": "Patch flat tires and replace damaged tubes on cycles.", "kind": "service", "category": "topic_07", "rating": 4.6, "price": 150}
+{"id": "item-07-3", "title": "Bicycle rental", "body": "Borrow a cycle for a day of sightseeing.", "kind": "service", "category": "topic_07", "rating": 3.5, "price": 175}
+{"id": "item-07-4", "title": "Bicycle rental Plus", "body": "Borrow a cycle for a day of sightseeing.", "kind": "service", "category": "topic_07", "rating": 3.5, "price": 200}
+{"id": "item-07-5", "title": "Bicycle rental Compact", "body": "Borrow a cycle for a day of sightseeing.", "kind": "service", "category": "topic_07", "rating": 3.5, "price": 225}
+{"id": "item-08-0", "title": "Ergonomic office chair", "body": "Adjustable lumbar support reduces back strain while seated.", "kind": "product", "category": "topic_08", "rating": 4.6, "price": 100}
+{"id": "item-08-1", "title": "Ergonomic office chair Plus", "body": "Adjustable lumbar support reduces back strain while seated.", "kind": "product", "category": "topic_08", "rating": 4.6, "price": 125}
+{"id": "item-08-2", "title": "Ergonomic office chair Compact", "body": "Adjustable lumbar support reduces back strain while seated.", "kind": "product", "category": "topic_08", "rating": 4.6, "price": 150}
+{"id": "item-08-3", "title": "Folding camp stool", "body": "Portable outdoor seating without a backrest.", "kind": "product", "category": "topic_08", "rating": 3.5, "price": 175}
+{"id": "item-08-4", "title": "Folding camp stool Plus", "body": "Portable outdoor seating without a backrest.", "kind": "product", "category": "topic_08", "rating": 3.5, "price": 200}
+{"id": "item-08-5", "title": "Folding camp stool Compact", "body": "Portable outdoor seating without a backrest.", "kind": "product", "category": "topic_08", "rating": 3.5, "price": 225}
+{"id": "item-09-0", "title": "Laptop battery replacement", "body": "Install a new power cell when notebook charge capacity fades.", "kind": "service", "category": "topic_09", "rating": 4.6, "price": 100}
+{"id": "item-09-1", "title": "Laptop battery replacement Plus", "body": "Install a new power cell when notebook charge capacity fades.", "kind": "service", "category": "topic_09", "rating": 4.6, "price": 125}
+{"id": "item-09-2", "title": "Laptop battery replacement Compact", "body": "Install a new power cell when notebook charge capacity fades.", "kind": "service", "category": "topic_09", "rating": 4.6, "price": 150}
+{"id": "item-09-3", "title": "Laptop screen repair", "body": "Replace cracked displays and faulty pixels.", "kind": "service", "category": "topic_09", "rating": 3.5, "price": 175}
+{"id": "item-09-4", "title": "Laptop screen repair Plus", "body": "Replace cracked displays and faulty pixels.", "kind": "service", "category": "topic_09", "rating": 3.5, "price": 200}
+{"id": "item-09-5", "title": "Laptop screen repair Compact", "body": "Replace cracked displays and faulty pixels.", "kind": "service", "category": "topic_09", "rating": 3.5, "price": 225}
+{"id": "item-10-0", "title": "Bread baking guide", "body": "Learn dough fermentation, kneading, and oven techniques.", "kind": "document", "category": "topic_10", "rating": 4.6, "price": 100}
+{"id": "item-10-1", "title": "Bread baking guide Plus", "body": "Learn dough fermentation, kneading, and oven techniques.", "kind": "document", "category": "topic_10", "rating": 4.6, "price": 125}
+{"id": "item-10-2", "title": "Bread baking guide Compact", "body": "Learn dough fermentation, kneading, and oven techniques.", "kind": "document", "category": "topic_10", "rating": 4.6, "price": 150}
+{"id": "item-10-3", "title": "Cake decorating guide", "body": "Apply icing and decorative sugar flowers.", "kind": "document", "category": "topic_10", "rating": 3.5, "price": 175}
+{"id": "item-10-4", "title": "Cake decorating guide Plus", "body": "Apply icing and decorative sugar flowers.", "kind": "document", "category": "topic_10", "rating": 3.5, "price": 200}
+{"id": "item-10-5", "title": "Cake decorating guide Compact", "body": "Apply icing and decorative sugar flowers.", "kind": "document", "category": "topic_10", "rating": 3.5, "price": 225}
+{"id": "item-11-0", "title": "Waterproof hiking boots", "body": "Sealed footwear keeps feet dry on muddy trails.", "kind": "product", "category": "topic_11", "rating": 4.6, "price": 100}
+{"id": "item-11-1", "title": "Waterproof hiking boots Plus", "body": "Sealed footwear keeps feet dry on muddy trails.", "kind": "product", "category": "topic_11", "rating": 4.6, "price": 125}
+{"id": "item-11-2", "title": "Waterproof hiking boots Compact", "body": "Sealed footwear keeps feet dry on muddy trails.", "kind": "product", "category": "topic_11", "rating": 4.6, "price": 150}
+{"id": "item-11-3", "title": "Running sandals", "body": "Open footwear for exercise in dry weather.", "kind": "product", "category": "topic_11", "rating": 3.5, "price": 175}
+{"id": "item-11-4", "title": "Running sandals Plus", "body": "Open footwear for exercise in dry weather.", "kind": "product", "category": "topic_11", "rating": 3.5, "price": 200}
+{"id": "item-11-5", "title": "Running sandals Compact", "body": "Open footwear for exercise in dry weather.", "kind": "product", "category": "topic_11", "rating": 3.5, "price": 225}
+{"id": "item-12-0", "title": "Tax preparation service", "body": "Organize annual income records and file revenue returns.", "kind": "service", "category": "topic_12", "rating": 4.6, "price": 100}
+{"id": "item-12-1", "title": "Tax preparation service Plus", "body": "Organize annual income records and file revenue returns.", "kind": "service", "category": "topic_12", "rating": 4.6, "price": 125}
+{"id": "item-12-2", "title": "Tax preparation service Compact", "body": "Organize annual income records and file revenue returns.", "kind": "service", "category": "topic_12", "rating": 4.6, "price": 150}
+{"id": "item-12-3", "title": "Bookkeeping training", "body": "Learn to maintain daily business expense accounts.", "kind": "service", "category": "topic_12", "rating": 3.5, "price": 175}
+{"id": "item-12-4", "title": "Bookkeeping training Plus", "body": "Learn to maintain daily business expense accounts.", "kind": "service", "category": "topic_12", "rating": 3.5, "price": 200}
+{"id": "item-12-5", "title": "Bookkeeping training Compact", "body": "Learn to maintain daily business expense accounts.", "kind": "service", "category": "topic_12", "rating": 3.5, "price": 225}
+{"id": "item-13-0", "title": "Portable solar charger", "body": "Panels convert sunlight into electricity for USB devices outdoors.", "kind": "product", "category": "topic_13", "rating": 4.6, "price": 100}
+{"id": "item-13-1", "title": "Portable solar charger Plus", "body": "Panels convert sunlight into electricity for USB devices outdoors.", "kind": "product", "category": "topic_13", "rating": 4.6, "price": 125}
+{"id": "item-13-2", "title": "Portable solar charger Compact", "body": "Panels convert sunlight into electricity for USB devices outdoors.", "kind": "product", "category": "topic_13", "rating": 4.6, "price": 150}
+{"id": "item-13-3", "title": "Wall charger", "body": "USB power adapter requires mains electricity.", "kind": "product", "category": "topic_13", "rating": 3.5, "price": 175}
+{"id": "item-13-4", "title": "Wall charger Plus", "body": "USB power adapter requires mains electricity.", "kind": "product", "category": "topic_13", "rating": 3.5, "price": 200}
+{"id": "item-13-5", "title": "Wall charger Compact", "body": "USB power adapter requires mains electricity.", "kind": "product", "category": "topic_13", "rating": 3.5, "price": 225}
+{"id": "item-14-0", "title": "Sleep hygiene booklet", "body": "Consistent bedtime habits and dark rooms improve nightly rest.", "kind": "document", "category": "topic_14", "rating": 4.6, "price": 100}
+{"id": "item-14-1", "title": "Sleep hygiene booklet Plus", "body": "Consistent bedtime habits and dark rooms improve nightly rest.", "kind": "document", "category": "topic_14", "rating": 4.6, "price": 125}
+{"id": "item-14-2", "title": "Sleep hygiene booklet Compact", "body": "Consistent bedtime habits and dark rooms improve nightly rest.", "kind": "document", "category": "topic_14", "rating": 4.6, "price": 150}
+{"id": "item-14-3", "title": "Alarm clock manual", "body": "Configure wake times and audible alarms.", "kind": "document", "category": "topic_14", "rating": 3.5, "price": 175}
+{"id": "item-14-4", "title": "Alarm clock manual Plus", "body": "Configure wake times and audible alarms.", "kind": "document", "category": "topic_14", "rating": 3.5, "price": 200}
+{"id": "item-14-5", "title": "Alarm clock manual Compact", "body": "Configure wake times and audible alarms.", "kind": "document", "category": "topic_14", "rating": 3.5, "price": 225}
+{"id": "item-15-0", "title": "Dog grooming service", "body": "Wash canine coats, trim fur, and clip claws.", "kind": "service", "category": "topic_15", "rating": 4.6, "price": 100}
+{"id": "item-15-1", "title": "Dog grooming service Plus", "body": "Wash canine coats, trim fur, and clip claws.", "kind": "service", "category": "topic_15", "rating": 4.6, "price": 125}
+{"id": "item-15-2", "title": "Dog grooming service Compact", "body": "Wash canine coats, trim fur, and clip claws.", "kind": "service", "category": "topic_15", "rating": 4.6, "price": 150}
+{"id": "item-15-3", "title": "Dog walking service", "body": "Exercise pets on daily neighborhood routes.", "kind": "service", "category": "topic_15", "rating": 3.5, "price": 175}
+{"id": "item-15-4", "title": "Dog walking service Plus", "body": "Exercise pets on daily neighborhood routes.", "kind": "service", "category": "topic_15", "rating": 3.5, "price": 200}
+{"id": "item-15-5", "title": "Dog walking service Compact", "body": "Exercise pets on daily neighborhood routes.", "kind": "service", "category": "topic_15", "rating": 3.5, "price": 225}
+{"id": "item-16-0", "title": "Air purifier", "body": "HEPA filtration captures airborne particles and pollen indoors.", "kind": "product", "category": "topic_16", "rating": 4.6, "price": 100}
+{"id": "item-16-1", "title": "Air purifier Plus", "body": "HEPA filtration captures airborne particles and pollen indoors.", "kind": "product", "category": "topic_16", "rating": 4.6, "price": 125}
+{"id": "item-16-2", "title": "Air purifier Compact", "body": "HEPA filtration captures airborne particles and pollen indoors.", "kind": "product", "category": "topic_16", "rating": 4.6, "price": 150}
+{"id": "item-16-3", "title": "Humidifier", "body": "Increase indoor moisture by releasing mist.", "kind": "product", "category": "topic_16", "rating": 3.5, "price": 175}
+{"id": "item-16-4", "title": "Humidifier Plus", "body": "Increase indoor moisture by releasing mist.", "kind": "product", "category": "topic_16", "rating": 3.5, "price": 200}
+{"id": "item-16-5", "title": "Humidifier Compact", "body": "Increase indoor moisture by releasing mist.", "kind": "product", "category": "topic_16", "rating": 3.5, "price": 225}
+{"id": "item-17-0", "title": "Cloud backup manual", "body": "Schedule encrypted copies of files to remote storage.", "kind": "document", "category": "topic_17", "rating": 4.6, "price": 100}
+{"id": "item-17-1", "title": "Cloud backup manual Plus", "body": "Schedule encrypted copies of files to remote storage.", "kind": "document", "category": "topic_17", "rating": 4.6, "price": 125}
+{"id": "item-17-2", "title": "Cloud backup manual Compact", "body": "Schedule encrypted copies of files to remote storage.", "kind": "document", "category": "topic_17", "rating": 4.6, "price": 150}
+{"id": "item-17-3", "title": "Cloud billing manual", "body": "Explain invoices and compute usage charges.", "kind": "document", "category": "topic_17", "rating": 3.5, "price": 175}
+{"id": "item-17-4", "title": "Cloud billing manual Plus", "body": "Explain invoices and compute usage charges.", "kind": "document", "category": "topic_17", "rating": 3.5, "price": 200}
+{"id": "item-17-5", "title": "Cloud billing manual Compact", "body": "Explain invoices and compute usage charges.", "kind": "document", "category": "topic_17", "rating": 3.5, "price": 225}
+{"id": "item-18-0", "title": "Sewing alteration service", "body": "Shorten trouser hems and adjust garment fit.", "kind": "service", "category": "topic_18", "rating": 4.6, "price": 100}
+{"id": "item-18-1", "title": "Sewing alteration service Plus", "body": "Shorten trouser hems and adjust garment fit.", "kind": "service", "category": "topic_18", "rating": 4.6, "price": 125}
+{"id": "item-18-2", "title": "Sewing alteration service Compact", "body": "Shorten trouser hems and adjust garment fit.", "kind": "service", "category": "topic_18", "rating": 4.6, "price": 150}
+{"id": "item-18-3", "title": "Laundry service", "body": "Wash clothes and remove stains.", "kind": "service", "category": "topic_18", "rating": 3.5, "price": 175}
+{"id": "item-18-4", "title": "Laundry service Plus", "body": "Wash clothes and remove stains.", "kind": "service", "category": "topic_18", "rating": 3.5, "price": 200}
+{"id": "item-18-5", "title": "Laundry service Compact", "body": "Wash clothes and remove stains.", "kind": "service", "category": "topic_18", "rating": 3.5, "price": 225}
+{"id": "item-19-0", "title": "Electric toothbrush", "body": "Motor driven bristles remove plaque from teeth.", "kind": "product", "category": "topic_19", "rating": 4.6, "price": 100}
+{"id": "item-19-1", "title": "Electric toothbrush Plus", "body": "Motor driven bristles remove plaque from teeth.", "kind": "product", "category": "topic_19", "rating": 4.6, "price": 125}
+{"id": "item-19-2", "title": "Electric toothbrush Compact", "body": "Motor driven bristles remove plaque from teeth.", "kind": "product", "category": "topic_19", "rating": 4.6, "price": 150}
+{"id": "item-19-3", "title": "Hairbrush", "body": "Detangle and style hair manually.", "kind": "product", "category": "topic_19", "rating": 3.5, "price": 175}
+{"id": "item-19-4", "title": "Hairbrush Plus", "body": "Detangle and style hair manually.", "kind": "product", "category": "topic_19", "rating": 3.5, "price": 200}
+{"id": "item-19-5", "title": "Hairbrush Compact", "body": "Detangle and style hair manually.", "kind": "product", "category": "topic_19", "rating": 3.5, "price": 225}
+{"id": "item-20-0", "title": "Beginner guitar lessons", "body": "Teach chords and finger placement on a six string instrument.", "kind": "service", "category": "topic_20", "rating": 4.6, "price": 100}
+{"id": "item-20-1", "title": "Beginner guitar lessons Plus", "body": "Teach chords and finger placement on a six string instrument.", "kind": "service", "category": "topic_20", "rating": 4.6, "price": 125}
+{"id": "item-20-2", "title": "Beginner guitar lessons Compact", "body": "Teach chords and finger placement on a six string instrument.", "kind": "service", "category": "topic_20", "rating": 4.6, "price": 150}
+{"id": "item-20-3", "title": "Piano tuning service", "body": "Adjust string tension in keyboard instruments.", "kind": "service", "category": "topic_20", "rating": 3.5, "price": 175}
+{"id": "item-20-4", "title": "Piano tuning service Plus", "body": "Adjust string tension in keyboard instruments.", "kind": "service", "category": "topic_20", "rating": 3.5, "price": 200}
+{"id": "item-20-5", "title": "Piano tuning service Compact", "body": "Adjust string tension in keyboard instruments.", "kind": "service", "category": "topic_20", "rating": 3.5, "price": 225}
+{"id": "item-21-0", "title": "Composting handbook", "body": "Turn kitchen scraps into nutritious soil through decomposition.", "kind": "document", "category": "topic_21", "rating": 4.6, "price": 100}
+{"id": "item-21-1", "title": "Composting handbook Plus", "body": "Turn kitchen scraps into nutritious soil through decomposition.", "kind": "document", "category": "topic_21", "rating": 4.6, "price": 125}
+{"id": "item-21-2", "title": "Composting handbook Compact", "body": "Turn kitchen scraps into nutritious soil through decomposition.", "kind": "document", "category": "topic_21", "rating": 4.6, "price": 150}
+{"id": "item-21-3", "title": "Recycling bin guide", "body": "Sort paper, glass, and plastic for collection.", "kind": "document", "category": "topic_21", "rating": 3.5, "price": 175}
+{"id": "item-21-4", "title": "Recycling bin guide Plus", "body": "Sort paper, glass, and plastic for collection.", "kind": "document", "category": "topic_21", "rating": 3.5, "price": 200}
+{"id": "item-21-5", "title": "Recycling bin guide Compact", "body": "Sort paper, glass, and plastic for collection.", "kind": "document", "category": "topic_21", "rating": 3.5, "price": 225}
+{"id": "item-22-0", "title": "Smart doorbell camera", "body": "Record visitors at the entrance and alert your smartphone.", "kind": "product", "category": "topic_22", "rating": 4.6, "price": 100}
+{"id": "item-22-1", "title": "Smart doorbell camera Plus", "body": "Record visitors at the entrance and alert your smartphone.", "kind": "product", "category": "topic_22", "rating": 4.6, "price": 125}
+{"id": "item-22-2", "title": "Smart doorbell camera Compact", "body": "Record visitors at the entrance and alert your smartphone.", "kind": "product", "category": "topic_22", "rating": 4.6, "price": 150}
+{"id": "item-22-3", "title": "Indoor webcam", "body": "USB camera for desktop video meetings.", "kind": "product", "category": "topic_22", "rating": 3.5, "price": 175}
+{"id": "item-22-4", "title": "Indoor webcam Plus", "body": "USB camera for desktop video meetings.", "kind": "product", "category": "topic_22", "rating": 3.5, "price": 200}
+{"id": "item-22-5", "title": "Indoor webcam Compact", "body": "USB camera for desktop video meetings.", "kind": "product", "category": "topic_22", "rating": 3.5, "price": 225}
+{"id": "item-23-0", "title": "Phone charging port repair", "body": "Remove debris and replace damaged connector sockets.", "kind": "service", "category": "topic_23", "rating": 4.6, "price": 100}
+{"id": "item-23-1", "title": "Phone charging port repair Plus", "body": "Remove debris and replace damaged connector sockets.", "kind": "service", "category": "topic_23", "rating": 4.6, "price": 125}
+{"id": "item-23-2", "title": "Phone charging port repair Compact", "body": "Remove debris and replace damaged connector sockets.", "kind": "service", "category": "topic_23", "rating": 4.6, "price": 150}
+{"id": "item-23-3", "title": "Phone case fitting", "body": "Install protective covers around mobile devices.", "kind": "service", "category": "topic_23", "rating": 3.5, "price": 175}
+{"id": "item-23-4", "title": "Phone case fitting Plus", "body": "Install protective covers around mobile devices.", "kind": "service", "category": "topic_23", "rating": 3.5, "price": 200}
+{"id": "item-23-5", "title": "Phone case fitting Compact", "body": "Install protective covers around mobile devices.", "kind": "service", "category": "topic_23", "rating": 3.5, "price": 225}
+{"id": "item-24-0", "title": "Travel translation guide", "body": "Useful phrases for communicating abroad in unfamiliar languages.", "kind": "document", "category": "topic_24", "rating": 4.6, "price": 100}
+{"id": "item-24-1", "title": "Travel translation guide Plus", "body": "Useful phrases for communicating abroad in unfamiliar languages.", "kind": "document", "category": "topic_24", "rating": 4.6, "price": 125}
+{"id": "item-24-2", "title": "Travel translation guide Compact", "body": "Useful phrases for communicating abroad in unfamiliar languages.", "kind": "document", "category": "topic_24", "rating": 4.6, "price": 150}
+{"id": "item-24-3", "title": "Travel packing guide", "body": "Checklists for organizing luggage and toiletries.", "kind": "document", "category": "topic_24", "rating": 3.5, "price": 175}
+{"id": "item-24-4", "title": "Travel packing guide Plus", "body": "Checklists for organizing luggage and toiletries.", "kind": "document", "category": "topic_24", "rating": 3.5, "price": 200}
+{"id": "item-24-5", "title": "Travel packing guide Compact", "body": "Checklists for organizing luggage and toiletries.", "kind": "document", "category": "topic_24", "rating": 3.5, "price": 225}
+{"id": "item-25-0", "title": "Insulated lunch container", "body": "Keeps cooked meals warm until midday.", "kind": "product", "category": "topic_25", "rating": 4.6, "price": 100}
+{"id": "item-25-1", "title": "Insulated lunch container Plus", "body": "Keeps cooked meals warm until midday.", "kind": "product", "category": "topic_25", "rating": 4.6, "price": 125}
+{"id": "item-25-2", "title": "Insulated lunch container Compact", "body": "Keeps cooked meals warm until midday.", "kind": "product", "category": "topic_25", "rating": 4.6, "price": 150}
+{"id": "item-25-3", "title": "Glass salad bowl", "body": "Open serving bowl for cold vegetables.", "kind": "product", "category": "topic_25", "rating": 3.5, "price": 175}
+{"id": "item-25-4", "title": "Glass salad bowl Plus", "body": "Open serving bowl for cold vegetables.", "kind": "product", "category": "topic_25", "rating": 3.5, "price": 200}
+{"id": "item-25-5", "title": "Glass salad bowl Compact", "body": "Open serving bowl for cold vegetables.", "kind": "product", "category": "topic_25", "rating": 3.5, "price": 225}
+{"id": "item-26-0", "title": "Locksmith emergency service", "body": "Open locked doors when keys are lost.", "kind": "service", "category": "topic_26", "rating": 4.6, "price": 100}
+{"id": "item-26-1", "title": "Locksmith emergency service Plus", "body": "Open locked doors when keys are lost.", "kind": "service", "category": "topic_26", "rating": 4.6, "price": 125}
+{"id": "item-26-2", "title": "Locksmith emergency service Compact", "body": "Open locked doors when keys are lost.", "kind": "service", "category": "topic_26", "rating": 4.6, "price": 150}
+{"id": "item-26-3", "title": "Door painting service", "body": "Sand and repaint wooden entrance panels.", "kind": "service", "category": "topic_26", "rating": 3.5, "price": 175}
+{"id": "item-26-4", "title": "Door painting service Plus", "body": "Sand and repaint wooden entrance panels.", "kind": "service", "category": "topic_26", "rating": 3.5, "price": 200}
+{"id": "item-26-5", "title": "Door painting service Compact", "body": "Sand and repaint wooden entrance panels.", "kind": "service", "category": "topic_26", "rating": 3.5, "price": 225}
+{"id": "item-27-0", "title": "Rainwater harvesting guide", "body": "Collect rooftop runoff in tanks for later irrigation.", "kind": "document", "category": "topic_27", "rating": 4.6, "price": 100}
+{"id": "item-27-1", "title": "Rainwater harvesting guide Plus", "body": "Collect rooftop runoff in tanks for later irrigation.", "kind": "document", "category": "topic_27", "rating": 4.6, "price": 125}
+{"id": "item-27-2", "title": "Rainwater harvesting guide Compact", "body": "Collect rooftop runoff in tanks for later irrigation.", "kind": "document", "category": "topic_27", "rating": 4.6, "price": 150}
+{"id": "item-27-3", "title": "Weather forecast guide", "body": "Interpret atmospheric predictions and cloud charts.", "kind": "document", "category": "topic_27", "rating": 3.5, "price": 175}
+{"id": "item-27-4", "title": "Weather forecast guide Plus", "body": "Interpret atmospheric predictions and cloud charts.", "kind": "document", "category": "topic_27", "rating": 3.5, "price": 200}
+{"id": "item-27-5", "title": "Weather forecast guide Compact", "body": "Interpret atmospheric predictions and cloud charts.", "kind": "document", "category": "topic_27", "rating": 3.5, "price": 225}
+{"id": "item-28-0", "title": "Standing desk converter", "body": "Raise the work surface so tasks can be done upright.", "kind": "product", "category": "topic_28", "rating": 4.6, "price": 100}
+{"id": "item-28-1", "title": "Standing desk converter Plus", "body": "Raise the work surface so tasks can be done upright.", "kind": "product", "category": "topic_28", "rating": 4.6, "price": 125}
+{"id": "item-28-2", "title": "Standing desk converter Compact", "body": "Raise the work surface so tasks can be done upright.", "kind": "product", "category": "topic_28", "rating": 4.6, "price": 150}
+{"id": "item-28-3", "title": "Desk drawer organizer", "body": "Separate stationery in storage compartments.", "kind": "product", "category": "topic_28", "rating": 3.5, "price": 175}
+{"id": "item-28-4", "title": "Desk drawer organizer Plus", "body": "Separate stationery in storage compartments.", "kind": "product", "category": "topic_28", "rating": 3.5, "price": 200}
+{"id": "item-28-5", "title": "Desk drawer organizer Compact", "body": "Separate stationery in storage compartments.", "kind": "product", "category": "topic_28", "rating": 3.5, "price": 225}
+{"id": "item-29-0", "title": "Data recovery service", "body": "Retrieve files from damaged drives and failed memory cards.", "kind": "service", "category": "topic_29", "rating": 4.6, "price": 100}
+{"id": "item-29-1", "title": "Data recovery service Plus", "body": "Retrieve files from damaged drives and failed memory cards.", "kind": "service", "category": "topic_29", "rating": 4.6, "price": 125}
+{"id": "item-29-2", "title": "Data recovery service Compact", "body": "Retrieve files from damaged drives and failed memory cards.", "kind": "service", "category": "topic_29", "rating": 4.6, "price": 150}
+{"id": "item-29-3", "title": "Data deletion service", "body": "Permanently wipe sensitive media before disposal.", "kind": "service", "category": "topic_29", "rating": 3.5, "price": 175}
+{"id": "item-29-4", "title": "Data deletion service Plus", "body": "Permanently wipe sensitive media before disposal.", "kind": "service", "category": "topic_29", "rating": 3.5, "price": 200}
+{"id": "item-29-5", "title": "Data deletion service Compact", "body": "Permanently wipe sensitive media before disposal.", "kind": "service", "category": "topic_29", "rating": 3.5, "price": 225}

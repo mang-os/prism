@@ -1,0 +1,12 @@
+# Operations and recovery
+
+`prism --config examples/local.yaml index create demo --semantic` creates an index; omit `--semantic` for lexical mode. `ingest` accepts JSONL into a SQLite WAL journal. Its response gives accepted/visible revisions. `refresh` publishes accepted work; local HTTP serving also checks pending work once a second. `index stats` shows live count, generation, bytes, and revisions. `compact` merges up to four small segments while preserving results. `index gc` explicitly removes unreachable old segment/staging directories, retaining the current and two newest manifests.
+
+`cluster build` exports a static read-only collection epoch with three shards and a replica per shard. It refuses to overwrite an existing export. `cluster serve` launches six shard processes and a coordinator, all bound to loopback by default. Stop the coordinator to terminate its managed shards. A cluster update requires another export directory and a fresh coordinator. Distributed writes return a documented unsupported error; do not edit replica directories.
+
+Every replica advertises epoch ID, logical shard ID, global statistics fingerprint, model identity, and expected generation. The coordinator checks them at readiness and for every response. A failed preferred replica gets one retry on a matching replica within the budget. Successful shards can yield explicit partial results with `allow_partial=true`; strict mode returns an error. Native inference may finish after response cancellation, but no new work is scheduled after cancellation.
+
+A corrupt referenced file or manifest causes startup/readiness failure. Preserve the original directory for diagnosis and check the source SQLite file, checksums, and last valid manifest. The journal can rebuild an unpublished accepted tail. A corrupt **published** snapshot is not silently skipped; restore or reindex on a copy after diagnosing the source. Never mix different shard epochs or model revisions.
+
+Observe `/health/live`, `/health/ready`, and `/metrics`. Request/stage histograms, overload/error counters, and aggregate gauges for loaded index bytes, live documents, and pending revisions help investigate slow requests. Use the index stats endpoint for per-index file sizes. Bounded worker slots return 429 on overload. The server binds to `127.0.0.1` by default. Public deployment needs authentication and operational controls outside this educational release.
+

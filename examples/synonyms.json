@@ -1,0 +1,8 @@
+{
+  "version": "marketplace-v1",
+  "rules": [
+    {"from": "headset", "to": ["headphones"], "direction": "one_way"},
+    {"from": "air conditioner", "to": ["ac"], "direction": "equivalent"},
+    {"from": "noise cancelling", "to": ["blocking outside sound"], "direction": "equivalent"}
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "synthetic_only": true,
+  "no_relevance_claim": true,
+  "documents": 50000,
+  "dimension": 384,
+  "accepted_ms": 1974.7942000394687,
+  "build_ms": 11164.831300033256,
+  "results": {
+    "lexical": {
+      "queries": 100,
+      "p50_ms": 803.0461500748061,
+      "p95_ms": 1065.7236650469713,
+      "p99_ms": 1147.021928936013
+    },
+    "semantic": {
+      "queries": 100,
+      "p50_ms": 86.47340000607073,
+      "p95_ms": 143.32705998094752,
+      "p99_ms": 163.031808997039
+    },
+    "hybrid": {
+      "queries": 100,
+      "p50_ms": 759.1988499043509,
+      "p95_ms": 1137.1281600091606,
+      "p99_ms": 1249.4976779946599
+    }
+  },
+  "index_stats": {
+    "visible_revision": 50000,
+    "accepted_revision": 50000,
+    "generation": "065f7393407c4653915009963d7693b6",
+    "live_documents": 50000,
+    "segments": 1,
+    "bytes_by_file": {
+      "doc-offsets.bin": 400000,
+      "documents.jsonl": 11478894,
+      "field-lengths.bin": 400000,
+      "mutations.jsonl": 2938894,
+      "positions.bin": 500000,
+      "postings.bin": 2248528,
+      "segment.meta.json": 1033,
+      "skips.json": 239061,
+      "terms.dict": 1058,
+      "vector-docids.bin": 400000,
+      "vectors.f32": 76800000
+    },
+    "dimension": 384
+  },
+  "index_directory_bytes": 203101215,
+  "process_rss_bytes": 285102080,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "cpu_count": 16
+}

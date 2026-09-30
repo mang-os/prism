@@ -1,0 +1,5 @@
+# 0002 — Bounded fuzzy candidates for large vocabularies
+
+The build specification names a BK-tree for typo candidates. It remains in use for vocabularies of at most 5,000 terms. On SciFact's 35,931-term vocabulary, lazy BK-tree construction took over ten seconds during the first typo query and breached its five-second budget. For larger vocabularies, Prism builds a bigram lookup and checks at most 2,000 candidates with exact Levenshtein distance. The response marks `expansion_limited` when the cap cuts candidates.
+
+This is a deliberate bounded approximation: a true edit-distance neighbor can be missed if it shares no bigram or ranks below the cap. Exact terms, hard filters, and phrases are unaffected. The original small-fixture BK-tree reference tests remain meaningful. The [public run](../benchmark-report.md) records a small nDCG gain from fuzzy expansion and zero deadline failures; that does not prove complete typo recall on the large vocabulary. This decision does not weaken the requirement to disclose quality misses or deadline failures.

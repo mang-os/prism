@@ -1,0 +1,7 @@
+# 0001 — Custom local index and static snapshot cluster
+
+Prism is an educational, inspectable hybrid search engine. Python 3.11 keeps the implementation approachable while allowing FastAPI for HTTP, SQLite for durable accepted mutations, NumPy for exact vector math, and Sentence Transformers for real local embeddings. SQLite does not serve lexical search: Prism writes and reads its own immutable postings, positions, dictionaries, stored fields, checksums, and manifests.
+
+The local index is the source of truth for a static export. Three logical shards are partitioned deterministically; each shard has a byte-identical snapshot replica. A coordinator checks epoch, model, and global-statistics identity, fans out queries, merges branch rankings globally, and applies RRF after the merge. This provides real process-level failure behavior without implementing live distributed writes, election, or rebalancing in the first release.
+
+Exact dense scan is used because the reference corpus is about 5,000 documents and correctness is easy to verify against a full-sort oracle. The 50,000-row synthetic probe and public HTTP timings document where this approach and Python lexical scoring become costly. Approximate nearest-neighbor indexing and live replication remain stretch work. See [architecture](../architecture.md), [storage format](../storage-format.md), and [measured limits](../benchmark-report.md).

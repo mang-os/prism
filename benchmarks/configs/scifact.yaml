@@ -1,0 +1,9 @@
+documents: datasets/scifact/documents.jsonl
+queries: datasets/scifact/prism-queries.jsonl
+qrels: datasets/scifact/qrels/test.tsv
+semantic: true
+model_path: .cache/model
+candidate_k: 100
+output: artifacts/scifact
+opensearch: http://127.0.0.1:9200
+

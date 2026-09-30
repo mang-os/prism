@@ -1,0 +1,139 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "cpu_count": 16,
+  "index_root": "S:\\Prism\\artifacts\\scifact\\index-1790761185220039300",
+  "model_path": "S:\\Prism\\.cache\\model",
+  "results": [
+    {
+      "mode": "lexical",
+      "concurrency": 1,
+      "requests": 1000,
+      "successes": 988,
+      "errors": {
+        "DEADLINE_EXCEEDED": 12
+      },
+      "throughput_per_s": 5.554830178055193,
+      "p50_ms": 155.57589998934418,
+      "p95_ms": 395.68733506021067,
+      "p99_ms": 471.0440319881309,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 620728320,
+      "duration_s": 180.0235053000506,
+      "successful_throughput_per_s": 5.488172215918531,
+      "error_rate": 0.012
+    },
+    {
+      "mode": "lexical",
+      "concurrency": 4,
+      "requests": 1000,
+      "successes": 604,
+      "errors": {
+        "DEADLINE_EXCEEDED": 395,
+        "OVERLOADED": 1
+      },
+      "throughput_per_s": 7.055938553703459,
+      "p50_ms": 481.4898500335403,
+      "p95_ms": 700.0154300360009,
+      "p99_ms": 851.3537089864259,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 629436416,
+      "duration_s": 141.7245901999995,
+      "successful_throughput_per_s": 4.261786886436889,
+      "error_rate": 0.396
+    },
+    {
+      "mode": "lexical",
+      "concurrency": 16,
+      "requests": 1000,
+      "successes": 198,
+      "errors": {
+        "OVERLOADED": 593,
+        "DEADLINE_EXCEEDED": 201,
+        "ReadTimeout": 8
+      },
+      "throughput_per_s": 17.132717471963936,
+      "p50_ms": 1081.3981999526732,
+      "p95_ms": 1515.8421600295696,
+      "p99_ms": 1727.9451499762945,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 631287808,
+      "duration_s": 58.36785680009053,
+      "successful_throughput_per_s": 3.3922780594488593,
+      "error_rate": 0.802
+    },
+    {
+      "mode": "hybrid",
+      "concurrency": 1,
+      "requests": 1000,
+      "successes": 984,
+      "errors": {
+        "DEADLINE_EXCEEDED": 16
+      },
+      "throughput_per_s": 5.183925656368641,
+      "p50_ms": 171.68729996774346,
+      "p95_ms": 374.3744700332171,
+      "p99_ms": 463.1585749855728,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 655986688,
+      "duration_s": 192.90400099998806,
+      "successful_throughput_per_s": 5.100982845866742,
+      "error_rate": 0.016
+    },
+    {
+      "mode": "hybrid",
+      "concurrency": 4,
+      "requests": 1000,
+      "successes": 412,
+      "errors": {
+        "DEADLINE_EXCEEDED": 586,
+        "OVERLOADED": 2
+      },
+      "throughput_per_s": 6.399554296130562,
+      "p50_ms": 529.2740999720991,
+      "p95_ms": 763.3943449764046,
+      "p99_ms": 906.5172079729381,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 663445504,
+      "duration_s": 156.26088219997473,
+      "successful_throughput_per_s": 2.636616370005792,
+      "error_rate": 0.588
+    },
+    {
+      "mode": "hybrid",
+      "concurrency": 16,
+      "requests": 1000,
+      "successes": 123,
+      "errors": {
+        "OVERLOADED": 632,
+        "DEADLINE_EXCEEDED": 213,
+        "ReadTimeout": 32
+      },
+      "throughput_per_s": 16.235640633217137,
+      "p50_ms": 1180.1696000620723,
+      "p95_ms": 1621.4259600150397,
+      "p99_ms": 1809.201453954447,
+      "type": "closed_loop_local_http_smoke; percentiles_of_successful_responses_only",
+      "warm_requests": 100,
+      "server_rss_bytes": 663494656,
+      "duration_s": 61.59288829995784,
+      "successful_throughput_per_s": 1.996983797885708,
+      "error_rate": 0.877
+    }
+  ],
+  "limitations": "Closed-loop local HTTP smoke; not an open-arrival capacity test. Cold model/index load excluded; warmup and errors disclosed.",
+  "hardware": {
+    "cpu": "Intel Core i7-13620H",
+    "physical_cores": 10,
+    "logical_cpus": 16,
+    "ram_bytes": 16786550784,
+    "disk_type": "unverified",
+    "power_mode": "unverified"
+  },
+  "service_context": "OpenSearch Docker service remained resident but idle; its RSS was unavailable from the accessible node API."
+}

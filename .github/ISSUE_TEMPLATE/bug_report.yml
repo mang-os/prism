@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible Prism failure
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction and expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS, Python, Prism and model versions
+

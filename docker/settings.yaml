@@ -1,0 +1,8 @@
+data: /app/data
+model_path: /app/.cache/model
+synonyms_path: null
+host: 0.0.0.0
+port: 8080
+workers: 4
+role: local
+

@@ -1,0 +1,9 @@
+documents: examples/marketplace/documents.jsonl
+queries: examples/marketplace/queries.jsonl
+qrels: examples/marketplace/qrels.tsv
+synonyms: examples/synonyms.json
+semantic: true
+model_path: .cache/model
+candidate_k: 100
+output: artifacts/marketplace
+

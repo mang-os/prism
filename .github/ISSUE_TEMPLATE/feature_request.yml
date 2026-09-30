@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest a use case or improvement
+body:
+  - type: textarea
+    id: usecase
+    attributes:
+      label: User problem and example query
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevant data or evaluation example
+

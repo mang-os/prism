@@ -1,0 +1,29 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install locked dependencies
+        run: uv sync --locked --extra dev
+      - name: Lint
+        run: uv run ruff check src tests scripts benchmarks
+      - name: Format
+        run: uv run ruff format --check src tests scripts benchmarks
+      - name: Types
+        run: uv run mypy src/prism
+      - name: Tests
+        run: uv run pytest -q
+      - name: Package
+        run: uv run python -m build --wheel
+

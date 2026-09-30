@@ -1,0 +1,90 @@
+{"id": "q-00-exact", "text": "Noise cancelling headphones", "subset": "exact", "intent": 0, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-00-typo", "text": "Nose cancelling headphones", "subset": "typo", "intent": 0, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-00-semantic", "text": "quiet audio accessory that isolates me from busy surroundings", "subset": "semantic", "intent": 0, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-01-exact", "text": "AC repair technician", "subset": "exact", "intent": 1, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-01-typo", "text": "A repair technician", "subset": "typo", "intent": 1, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-01-semantic", "text": "my apartment stays hot despite switching on the appliance", "subset": "semantic", "intent": 1, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-02-exact", "text": "Bluetooth earbuds", "subset": "exact", "intent": 2, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-02-typo", "text": "Blueooth earbuds", "subset": "typo", "intent": 2, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-02-semantic", "text": "tiny gadgets so I can enjoy tunes without cords", "subset": "semantic", "intent": 2, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-03-exact", "text": "Distributed database handbook", "subset": "exact", "intent": 3, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-03-typo", "text": "Distrbuted database handbook", "subset": "typo", "intent": 3, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-03-semantic", "text": "reading material explaining resilient information across machines", "subset": "semantic", "intent": 3, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-04-exact", "text": "Plumber leak repair", "subset": "exact", "intent": 4, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-04-typo", "text": "Pluber leak repair", "subset": "typo", "intent": 4, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-04-semantic", "text": "someone to stop water escaping under my sink", "subset": "semantic", "intent": 4, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-05-exact", "text": "Robot vacuum cleaner", "subset": "exact", "intent": 5, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-05-typo", "text": "Root vacuum cleaner", "subset": "typo", "intent": 5, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-05-semantic", "text": "machine that keeps carpets tidy by itself", "subset": "semantic", "intent": 5, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-06-exact", "text": "Password manager", "subset": "exact", "intent": 6, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-06-typo", "text": "Passord manager", "subset": "typo", "intent": 6, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-06-semantic", "text": "tool to remember secret access codes for websites", "subset": "semantic", "intent": 6, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-07-exact", "text": "Bicycle puncture service", "subset": "exact", "intent": 7, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-07-typo", "text": "Biccle puncture service", "subset": "typo", "intent": 7, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-07-semantic", "text": "help when my bike wheel loses air", "subset": "semantic", "intent": 7, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-08-exact", "text": "Ergonomic office chair", "subset": "exact", "intent": 8, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-08-typo", "text": "Ergoomic office chair", "subset": "typo", "intent": 8, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-08-semantic", "text": "comfortable furniture for long hours at my desk", "subset": "semantic", "intent": 8, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-09-exact", "text": "Laptop battery replacement", "subset": "exact", "intent": 9, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-09-typo", "text": "Lapop battery replacement", "subset": "typo", "intent": 9, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-09-semantic", "text": "computer dies soon after I unplug the charger", "subset": "semantic", "intent": 9, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-10-exact", "text": "Bread baking guide", "subset": "exact", "intent": 10, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-10-typo", "text": "Brad baking guide", "subset": "typo", "intent": 10, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-10-semantic", "text": "instructions for making fresh loaves at home", "subset": "semantic", "intent": 10, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-11-exact", "text": "Waterproof hiking boots", "subset": "exact", "intent": 11, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-11-typo", "text": "Waterroof hiking boots", "subset": "typo", "intent": 11, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-11-semantic", "text": "shoes for trekking through rain and puddles", "subset": "semantic", "intent": 11, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-12-exact", "text": "Tax preparation service", "subset": "exact", "intent": 12, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-12-typo", "text": "Tx preparation service", "subset": "typo", "intent": 12, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-12-semantic", "text": "professional help submitting what I owe the government", "subset": "semantic", "intent": 12, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-13-exact", "text": "Portable solar charger", "subset": "exact", "intent": 13, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-13-typo", "text": "Portble solar charger", "subset": "typo", "intent": 13, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-13-semantic", "text": "power my phone away from sockets using daylight", "subset": "semantic", "intent": 13, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-14-exact", "text": "Sleep hygiene booklet", "subset": "exact", "intent": 14, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-14-typo", "text": "Slep hygiene booklet", "subset": "typo", "intent": 14, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-14-semantic", "text": "reading about getting better shuteye", "subset": "semantic", "intent": 14, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-15-exact", "text": "Dog grooming service", "subset": "exact", "intent": 15, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-15-typo", "text": "Dg grooming service", "subset": "typo", "intent": 15, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-15-semantic", "text": "someone to tidy up my puppy's appearance", "subset": "semantic", "intent": 15, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-16-exact", "text": "Air purifier", "subset": "exact", "intent": 16, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-16-typo", "text": "Ar purifier", "subset": "typo", "intent": 16, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-16-semantic", "text": "reduce allergens floating around my room", "subset": "semantic", "intent": 16, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-17-exact", "text": "Cloud backup manual", "subset": "exact", "intent": 17, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-17-typo", "text": "Clud backup manual", "subset": "typo", "intent": 17, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-17-semantic", "text": "instructions to protect computer content if a disk breaks", "subset": "semantic", "intent": 17, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-18-exact", "text": "Sewing alteration service", "subset": "exact", "intent": 18, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-18-typo", "text": "Sewng alteration service", "subset": "typo", "intent": 18, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-18-semantic", "text": "make these pants less long so they fit me", "subset": "semantic", "intent": 18, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-19-exact", "text": "Electric toothbrush", "subset": "exact", "intent": 19, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-19-typo", "text": "Elecric toothbrush", "subset": "typo", "intent": 19, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-19-semantic", "text": "powered tool for keeping my mouth clean", "subset": "semantic", "intent": 19, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-20-exact", "text": "Beginner guitar lessons", "subset": "exact", "intent": 20, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-20-typo", "text": "Beginer guitar lessons", "subset": "typo", "intent": 20, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-20-semantic", "text": "learn how to play acoustic tunes from scratch", "subset": "semantic", "intent": 20, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-21-exact", "text": "Composting handbook", "subset": "exact", "intent": 21, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-21-typo", "text": "Compoting handbook", "subset": "typo", "intent": 21, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-21-semantic", "text": "learn to recycle vegetable waste into garden food", "subset": "semantic", "intent": 21, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-22-exact", "text": "Smart doorbell camera", "subset": "exact", "intent": 22, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-22-typo", "text": "Smrt doorbell camera", "subset": "typo", "intent": 22, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-22-semantic", "text": "see who is outside my house while I am away", "subset": "semantic", "intent": 22, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-23-exact", "text": "Phone charging port repair", "subset": "exact", "intent": 23, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-23-typo", "text": "Phne charging port repair", "subset": "typo", "intent": 23, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-23-semantic", "text": "handset refuses to take power from the cable", "subset": "semantic", "intent": 23, "split": "test", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-24-exact", "text": "Travel translation guide", "subset": "exact", "intent": 24, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-24-typo", "text": "Trael translation guide", "subset": "typo", "intent": 24, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-24-semantic", "text": "reading that helps me talk to locals overseas", "subset": "semantic", "intent": 24, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-25-exact", "text": "Insulated lunch container", "subset": "exact", "intent": 25, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-25-typo", "text": "Insuated lunch container", "subset": "typo", "intent": 25, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-25-semantic", "text": "carry food so it stays hot at work", "subset": "semantic", "intent": 25, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-26-exact", "text": "Locksmith emergency service", "subset": "exact", "intent": 26, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-26-typo", "text": "Lockmith emergency service", "subset": "typo", "intent": 26, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-26-semantic", "text": "I cannot get inside because I misplaced my key", "subset": "semantic", "intent": 26, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-27-exact", "text": "Rainwater harvesting guide", "subset": "exact", "intent": 27, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-27-typo", "text": "Rainater harvesting guide", "subset": "typo", "intent": 27, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-27-semantic", "text": "instructions to save precipitation for watering plants", "subset": "semantic", "intent": 27, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "document"}]}
+{"id": "q-28-exact", "text": "Standing desk converter", "subset": "exact", "intent": 28, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-28-typo", "text": "Staning desk converter", "subset": "typo", "intent": 28, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-28-semantic", "text": "workspace accessory that lets me stop sitting", "subset": "semantic", "intent": 28, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "product"}]}
+{"id": "q-29-exact", "text": "Data recovery service", "subset": "exact", "intent": 29, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-29-typo", "text": "Daa recovery service", "subset": "typo", "intent": 29, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}
+{"id": "q-29-semantic", "text": "get my lost photos back from broken storage", "subset": "semantic", "intent": 29, "split": "dev", "filters": [{"field": "kind", "op": "eq", "value": "service"}]}

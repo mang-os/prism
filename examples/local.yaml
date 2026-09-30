@@ -1,0 +1,8 @@
+data: data
+model_path: .cache/model
+synonyms_path: examples/synonyms.json
+host: 127.0.0.1
+port: 8080
+workers: 4
+role: local
+

@@ -1,0 +1,12 @@
+Prism is an educational search infrastructure project licensed under Apache-2.0.
+
+The optional sentence-transformers/all-MiniLM-L6-v2 embedding model is provided
+by Sentence Transformers under its published Apache-2.0 model license. Weights
+are downloaded separately and are not included in this repository.
+Model card: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+
+The BEIR SciFact corpus and qrels are downloaded separately; see
+datasets/README.md for provenance and upstream rights. OpenSearch is an
+external benchmark service and is not included in Prism's runtime.
+Python dependencies retain their maintainers' respective licenses.
+
