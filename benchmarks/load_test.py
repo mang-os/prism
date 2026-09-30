@@ -93,8 +93,14 @@ def main():
     p.add_argument("--model-path", default=".cache/model")
     p.add_argument("--samples", type=int, default=1000)
     p.add_argument("--timeout-ms", type=int, default=500)
+    p.add_argument(
+        "--modes", nargs="+", choices=("lexical", "hybrid"), default=("lexical", "hybrid")
+    )
+    p.add_argument("--concurrency", nargs="+", type=int, default=(1, 4, 16))
     p.add_argument("--output", default="artifacts/performance/report.json")
     args = p.parse_args()
+    if args.samples < 1 or any(value < 1 for value in args.concurrency):
+        p.error("samples and concurrency must be positive")
     index_root = Path(args.index_root).resolve()
     queries = [json.loads(x) for x in Path(args.queries).read_text().splitlines()]
     if not queries or not (index_root / "CURRENT").exists():
@@ -135,8 +141,8 @@ def main():
                 raise TimeoutError("Server did not become ready")
             time.sleep(0.2)
         results = []
-        for mode in ("lexical", "hybrid"):
-            for concurrency in (1, 4, 16):
+        for mode in args.modes:
+            for concurrency in args.concurrency:
                 result = asyncio.run(
                     measure(
                         base,

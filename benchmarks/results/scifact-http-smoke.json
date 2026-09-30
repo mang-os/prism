@@ -2,8 +2,8 @@
   "platform": "Windows-10-10.0.26200-SP0",
   "python": "3.11.16",
   "cpu_count": 16,
-  "index_root": "S:\\Prism\\artifacts\\scifact\\index-1790761185220039300",
-  "model_path": "S:\\Prism\\.cache\\model",
+  "index_root": "artifacts/scifact/index-1790761185220039300",
+  "model_path": ".cache/model",
   "results": [
     {
       "mode": "lexical",

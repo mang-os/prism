@@ -1,0 +1,168 @@
+{
+  "method": "closed-loop localhost HTTP; percentiles of successful responses only",
+  "warm_requests_per_run": 100,
+  "server_deadline_ms": 500,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "cpu_count": 16,
+  "index_name": "index-1790761185220039300",
+  "source_report_sha256": [
+    "deab1c2885693ac87be213d75010235bc5003f467ff1ed737b533f835a12c7d9",
+    "6e1500334a61ed9e29b725a15a0da0dd885c34451004914350ec3ffedc27e385",
+    "54e9abdb4f08c386433f7b1f1679aa4b4e9a5696975008cb0fad5187fd7212cf"
+  ],
+  "groups": [
+    {
+      "mode": "hybrid",
+      "concurrency": 1,
+      "requests_per_run": 500,
+      "runs": [
+        {
+          "run": 1,
+          "successes": 498,
+          "errors": {
+            "DEADLINE_EXCEEDED": 2
+          },
+          "p50_ms": 101.09679994639009,
+          "p95_ms": 337.4757800076622,
+          "p99_ms": 460.0932190520688,
+          "throughput_per_s": 8.101873580624032,
+          "successful_throughput_per_s": 8.069466086301535,
+          "error_rate": 0.004
+        },
+        {
+          "run": 2,
+          "successes": 497,
+          "errors": {
+            "DEADLINE_EXCEEDED": 3
+          },
+          "p50_ms": 102.28370002005249,
+          "p95_ms": 342.9081799462437,
+          "p99_ms": 441.0940399440007,
+          "throughput_per_s": 7.971189074508035,
+          "successful_throughput_per_s": 7.923361940060987,
+          "error_rate": 0.006
+        },
+        {
+          "run": 3,
+          "successes": 500,
+          "errors": {},
+          "p50_ms": 80.29075001832098,
+          "p95_ms": 239.421294996282,
+          "p99_ms": 396.6155100136529,
+          "throughput_per_s": 10.2154322287075,
+          "successful_throughput_per_s": 10.2154322287075,
+          "error_rate": 0.0
+        }
+      ],
+      "spread": {
+        "p50_ms": {
+          "min": 80.29075001832098,
+          "median": 101.09679994639009,
+          "max": 102.28370002005249
+        },
+        "p95_ms": {
+          "min": 239.421294996282,
+          "median": 337.4757800076622,
+          "max": 342.9081799462437
+        },
+        "p99_ms": {
+          "min": 396.6155100136529,
+          "median": 441.0940399440007,
+          "max": 460.0932190520688
+        },
+        "throughput_per_s": {
+          "min": 7.971189074508035,
+          "median": 8.101873580624032,
+          "max": 10.2154322287075
+        },
+        "successful_throughput_per_s": {
+          "min": 7.923361940060987,
+          "median": 8.069466086301535,
+          "max": 10.2154322287075
+        },
+        "error_rate": {
+          "min": 0.0,
+          "median": 0.004,
+          "max": 0.006
+        }
+      }
+    },
+    {
+      "mode": "lexical",
+      "concurrency": 1,
+      "requests_per_run": 500,
+      "runs": [
+        {
+          "run": 1,
+          "successes": 498,
+          "errors": {
+            "DEADLINE_EXCEEDED": 2
+          },
+          "p50_ms": 74.62910003960133,
+          "p95_ms": 261.32480002706865,
+          "p99_ms": 366.02299492340484,
+          "throughput_per_s": 10.855222777885318,
+          "successful_throughput_per_s": 10.811801886773777,
+          "error_rate": 0.004
+        },
+        {
+          "run": 2,
+          "successes": 500,
+          "errors": {},
+          "p50_ms": 82.0594999822788,
+          "p95_ms": 313.6819200066374,
+          "p99_ms": 424.74327406031074,
+          "throughput_per_s": 9.764088395645345,
+          "successful_throughput_per_s": 9.764088395645345,
+          "error_rate": 0.0
+        },
+        {
+          "run": 3,
+          "successes": 499,
+          "errors": {
+            "DEADLINE_EXCEEDED": 1
+          },
+          "p50_ms": 76.82490011211485,
+          "p95_ms": 312.5050999922672,
+          "p99_ms": 418.70893803425076,
+          "throughput_per_s": 9.840283538706512,
+          "successful_throughput_per_s": 9.8206029716291,
+          "error_rate": 0.002
+        }
+      ],
+      "spread": {
+        "p50_ms": {
+          "min": 74.62910003960133,
+          "median": 76.82490011211485,
+          "max": 82.0594999822788
+        },
+        "p95_ms": {
+          "min": 261.32480002706865,
+          "median": 312.5050999922672,
+          "max": 313.6819200066374
+        },
+        "p99_ms": {
+          "min": 366.02299492340484,
+          "median": 418.70893803425076,
+          "max": 424.74327406031074
+        },
+        "throughput_per_s": {
+          "min": 9.764088395645345,
+          "median": 9.840283538706512,
+          "max": 10.855222777885318
+        },
+        "successful_throughput_per_s": {
+          "min": 9.764088395645345,
+          "median": 9.8206029716291,
+          "max": 10.811801886773777
+        },
+        "error_rate": {
+          "min": 0.0,
+          "median": 0.002,
+          "max": 0.004
+        }
+      }
+    }
+  ]
+}

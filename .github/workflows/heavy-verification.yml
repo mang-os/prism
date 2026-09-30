@@ -35,6 +35,7 @@ jobs:
           for repeat in 1 2 3; do
             uv run --no-sync python benchmarks/load_test.py --index-root "$index_root" --queries datasets/scifact/prism-queries.jsonl --samples 1000 --output "artifacts/performance/repeat-${repeat}/report.json"
           done
+          uv run --no-sync python benchmarks/summarize_load.py --reports artifacts/performance/repeat-{1,2,3}/report.json --timeout-ms 500 --output artifacts/performance/summary.json
       - name: Run synthetic scale probe
         run: uv run --no-sync python benchmarks/synthetic_scale.py --index-root artifacts/scale/index --output artifacts/scale/report.json --documents 50000 --queries 100
       - name: Upload measured reports
@@ -45,6 +46,7 @@ jobs:
           path: |
             artifacts/scifact/summary.json
             artifacts/performance/repeat-*/report.json
+            artifacts/performance/summary.json
             artifacts/performance/repeat-*/server-metrics.prom
             artifacts/performance/repeat-*/server.log
             artifacts/scale/report.json

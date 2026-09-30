@@ -1,6 +1,6 @@
 # Measured results
 
-This report separates completed relevance comparisons from the longer performance protocol still open. Small machine-readable [result summaries](../benchmarks/results/README.md) are included in the repository. Raw per-query runs and HTML lab output live under ignored `artifacts/`; recreate them with the commands in the [README](../README.md). Numbers below are observations on one Windows 11 development machine, not general performance guarantees.
+This report records relevance, indexing, HTTP load, and synthetic scale measurements. Small machine-readable [result summaries](../benchmarks/results/README.md) are included in the repository. Raw per-query runs and HTML lab output live under ignored `artifacts/`; recreate them with the commands in the [README](../README.md). Numbers below are observations on one Windows 11 development machine, not general performance guarantees.
 
 ## Original marketplace fixture
 
@@ -63,6 +63,17 @@ This test used the same 5,183-document snapshot and 300 SciFact query texts thro
 
 At one client, Prism misses the specification's lexical p50/p95/p99 targets (20/75/150 ms) and hybrid p50/p95 targets (100/250 ms); the hybrid p99 success-only value is below 500 ms but has failures. Higher concurrency saturates the process; 429 overload rejections and deadline errors dominate. Client-observed success latency can exceed the server budget because network/queue/response time is also measured. This is a closed-loop smoke, not an open-arrival capacity test. The Docker OpenSearch service remained resident but idle during this test; its simultaneous RSS was not recorded. Server RSS above is the Prism process as sampled after each batch. The raw [load script](../benchmarks/load_test.py) and ignored `artifacts/performance/report.json` preserve counts and error codes.
 
+## Repeated HTTP latency check
+
+After the first smoke, the same SciFact snapshot was tested in **three separate runs per mode**, with **500 measured requests and 100 warmups per run**, one client, `top_k=10`, `candidate_k=100`, fuzzy/synonym expansion off, and a **500 ms server deadline**. Modes ran sequentially. OpenSearch was stopped for these runs. The table gives the range across the three runs; percentiles include successful responses only. [Every run, its error codes, and SHA-256 links to the ignored raw reports](../benchmarks/results/scifact-http-repeated.json) are saved.
+
+| Mode | p50 range ms | p95 range ms | p99 range ms | Successful req/s range | Error rate range |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Lexical | 75–82 | 261–314 | 366–425 | 9.76–10.81 | 0–0.4% |
+| Hybrid | 80–102 | 239–343 | 397–460 | 7.92–10.22 | 0–0.6% |
+
+Lexical runs succeeded on 498, 500, and 499 of 500 requests; hybrid succeeded on 498, 497, and 500. Every failed request in these six runs returned `DEADLINE_EXCEEDED`; none returned `OVERLOADED` at one client. The spread from the earlier 1,000-request smoke is material, so no single latency value should be treated as a stable service level. Five hundred observations per run give only a few points in each p99 tail. The Python lexical scorer's broad posting traversal and CPU contention remain likely bottlenecks; the earlier traversal optimization reduced latency without changing the top-100 rankings. The reference targets remain unmet.
+
 ## Synthetic scale probe
 
 The [scale script](../benchmarks/synthetic_scale.py) created 50,000 short synthetic documents and deterministic **synthetic** 384-dimensional vectors. It is a storage/scan exercise only; it provides no semantic relevance evidence. Acceptance plus refresh took **11.16 s**, the index directory occupied **203.1 MB**, and process RSS after the run was **272 MiB**. After 20 warmups, 100 in-process queries per mode produced:
@@ -79,7 +90,7 @@ The repetitive synthetic terms create very long posting lists, exposing a Python
 
 - Host: Windows build 26200, Intel Core i7-13620H (10 physical/16 logical cores), 16,786,550,784 bytes RAM, Python 3.11.16. The filesystem media and power mode could not be verified in this managed session. Prism and the Docker OpenSearch service shared this host, so their timing was affected by shared resources.
 - Relevance uses graded qrels for nDCG and binary relevance for recall, MRR, and success. Unjudged documents count as nonrelevant. Candidate depth is 100.
-- Every saved run records query text, split, subset, request settings, latency, hits, and metrics; the report records input checksums, OS, Python, model fingerprint, and index bytes. The local code state is currently uncommitted, so the report says `uncommitted`.
+- The original saved relevance run records query text, split, subset, request settings, latency, hits, and metrics; its report records input checksums, OS, Python, model fingerprint, and index bytes. That historical run predates the first Git commit, so its metadata correctly says `uncommitted`; the published summary retains the raw report hash.
 - The OpenSearch comparison is **lexical versus lexical**. Its BM25 parameters are `k1=1.2`, `b=0.75`, with title boost 2. Tokenization and scoring are close but not identical.
 - A small in-process relevance run cannot support the specification's HTTP latency targets; the separate load smoke above does. Successful-response percentiles are subject to timeout selection bias.
-- Repeated 10,000-request performance distributions, bounded-arrival testing, hosted CI, and reproduction from an actual Git clone are pending. A source-only copy did pass locked lexical installation and the documented ingest/refresh/typo-search path. The release definition of done remains open.
+- The three 500-request repeats establish a local range but are smaller than the build specification's aspirational 10,000-request distributions. Bounded-arrival capacity testing is still open. Ubuntu and Windows CI passed on commit `4cbea42`, and a fresh Git clone at that commit passed locked installation, all 46 tests, wheel build, search modes, HTTP demo, replica failover, and partial-result checks. CI must be green again on the final release commit before tagging.
