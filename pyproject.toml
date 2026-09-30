@@ -33,7 +33,7 @@ target-version = "py311"
 select = ["E4", "E7", "E9", "F", "I", "B"]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 ignore_missing_imports = true
 check_untyped_defs = true
 
