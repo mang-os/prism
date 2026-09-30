@@ -14,16 +14,20 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
+      - name: Install Python 3.11
+        run: uv python install 3.11
       - name: Install locked dependencies
-        run: uv sync --locked --extra dev
+        run: uv sync --python 3.11 --locked --extra dev
       - name: Lint
-        run: uv run ruff check src tests scripts benchmarks
+        run: uv run --no-sync ruff check src tests scripts benchmarks
       - name: Format
-        run: uv run ruff format --check src tests scripts benchmarks
+        run: uv run --no-sync ruff format --check src tests scripts benchmarks
       - name: Types
-        run: uv run mypy src/prism
+        run: uv run --no-sync mypy src/prism
       - name: Tests
-        run: uv run pytest -q
+        run: uv run --no-sync pytest -q
       - name: Package
-        run: uv run python -m build --wheel
+        run: uv run --no-sync python -m build --wheel
+      - name: HTTP and search smoke
+        run: uv run --no-sync python scripts/smoke.py
 
