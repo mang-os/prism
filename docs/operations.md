@@ -10,3 +10,5 @@ A corrupt referenced file or manifest causes startup/readiness failure. Preserve
 
 Observe `/health/live`, `/health/ready`, and `/metrics`. Request/stage histograms, overload/error counters, and aggregate gauges for loaded index bytes, live documents, and pending revisions help investigate slow requests. Use the index stats endpoint for per-index file sizes. Bounded worker slots return 429 on overload. The server binds to `127.0.0.1` by default. Public deployment needs authentication and operational controls outside this educational release.
 
+The `/demo` page uses the same search API as other clients. With a semantic `demo` index and the pinned local model, its three example queries show typo tolerance, wording variation, and semantic intent. The page reports requested/executed mode, ranked scores, and shard coverage. Stop a primary shard process to observe replica selection; stop both replicas of one shard to observe partial coverage. The [real-process integration test](../tests/test_distributed.py) exercises those states automatically.
+

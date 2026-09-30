@@ -2,7 +2,7 @@
 
 Prism is an educational search engine for products, services, and documents. It combines a custom persistent keyword index with local embeddings, so a search for “my air conditioner is not cooling” can retrieve an AC repair service. It searches only documents you provide.
 
-**Status:** Local search, real MiniLM retrieval, and a static snapshot cluster have been implemented and tested. See [build status](docs/build-status.md) and [measured results](docs/benchmark-report.md). The [build specification](PRISM_BUILD_SPEC.md) remains the release contract. Production readiness is not claimed.
+**Status:** Local search, real MiniLM retrieval, and a static snapshot cluster have been implemented and tested. Windows and Ubuntu CI cover the locked install, source checks, tests, wheel, and HTTP smoke. See [build status](docs/build-status.md) and [measured results](docs/benchmark-report.md). This is an educational implementation, not a production service.
 
 | Capability | Implementation | Evidence |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ Use Python 3.11 and [uv](https://docs.astral.sh/uv/). The model needs about 2 Gi
 
 ```bash
 uv sync --locked --extra dev --extra semantic
-uv run prism model download
+uv run prism model download --revision 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
 ```
 
 On Windows hosts that block temporary build helpers, this two-step install was verified:
@@ -51,7 +51,7 @@ uv run prism --config examples/local.yaml search demo --query 'kind:service AND 
 uv run prism --config examples/local.yaml serve
 ```
 
-Omit `--semantic` at creation for the lexical-only path. On the managed Windows host, `.venv\Scripts\prism.exe` also runs the installed CLI directly. Accepted mutations are durable and become searchable after `refresh` or the server's scheduled refresh. `index stats` reports accepted and visible revisions.
+Omit `--semantic` at creation for the lexical-only path. Accepted mutations are durable and become searchable after `refresh` or the server's scheduled refresh. `index stats` reports accepted and visible revisions.
 
 With the server on `127.0.0.1:8080`, send an HTTP search:
 
@@ -63,6 +63,8 @@ curl -X POST http://127.0.0.1:8080/v1/indexes/demo/search \
 
 PowerShell users can use `Invoke-RestMethod` as shown in [API documentation](docs/api.md). The server also exposes `/docs` and `/metrics`.
 
+Open [http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo) after starting `serve`. The focused demo accepts a query, selects lexical/semantic/hybrid mode, displays ranked results and scores, and reports shard coverage. Try `bluetooh hedphones`, `wireless earphones`, and `something to block noise while travelling`. Semantic and hybrid modes require an index created with `--semantic` and the downloaded model. The page works through a cluster coordinator too.
+
 ## Distributed demo
 
 ```bash
@@ -70,30 +72,33 @@ uv run prism --config examples/local.yaml cluster build demo --shards 3 --replic
 uv run prism --config examples/local.yaml cluster serve --topology data/cluster/topology.json
 ```
 
-The second command starts six real shard processes and a coordinator on port `8080`. The shard ports are `9100/9101`, `9110/9111`, and `9120/9121`. Search through the same HTTP endpoint. Stop `shard-0-a` and search again: the response should identify `shard-0-b` with full coverage. The cluster serves exported snapshots; distributed writes are outside this release. See [operations](docs/operations.md).
+Stop the local `serve` process before starting the cluster: both use port `8080`. The cluster command starts six shard processes and a coordinator. Search through the same HTTP endpoint or `/demo`. If the `shard-0-a` process stops, the coordinator retries `shard-0-b` with full coverage. If both replicas of one shard stop, a default search returns `partial=true` and reduced coverage; `allow_partial=false` returns an error. The cluster serves exported snapshots; distributed writes are outside this release. See [operations](docs/operations.md).
 
 ## Relevance and benchmarks
 
 ```bash
 uv run prism lab --run-config benchmarks/configs/marketplace.yaml
 uv run python benchmarks/prepare_scifact.py
-docker compose -f docker/compose.benchmark.yaml up -d
+docker compose -f docker/compose.benchmark.yaml up -d --wait
 uv run prism benchmark --run-config benchmarks/configs/scifact.yaml
 ```
 
 Run JSON, a static HTML relevance report, and input checksums go under ignored `artifacts/`. Open `artifacts/marketplace/report.html` or `artifacts/scifact/report.html` locally. The lexical-only lab needs no model: `uv run prism lab --run-config benchmarks/configs/marketplace-lexical.yaml`. The [benchmark report](docs/benchmark-report.md) gives current measured outcomes and pending checks.
 Small, machine-readable [measured summaries](benchmarks/results/README.md) are included in the repository; the large per-query output stays under ignored `artifacts/`.
 
+On 300 public SciFact test queries, Prism exact lexical scored **0.5857 nDCG@10 / 0.6982 recall@10**, hybrid scored **0.6758 / 0.8119**, and the OpenSearch lexical baseline scored **0.5810 / 0.6948**. These are relevance measurements with different analyzers. The first 1,000-request localhost HTTP smoke at one client measured lexical **156/396/471 ms** p50/p95/p99 with **1.2%** errors and **5.49 successful requests/s**; hybrid measured **172/374/463 ms**, **1.6%** errors, and **5.10 successful requests/s**. At four and sixteen clients, errors rose sharply. See the full [methods and limits](docs/benchmark-report.md); the results are not service level guarantees.
+
+Three later 500-request single-client repeats per mode showed lexical p95 **261–314 ms** and hybrid p95 **239–343 ms**, with some deadline errors. The [saved repeat summary](benchmarks/results/scifact-http-repeated.json) includes p50/p95/p99, throughput, error rates, and each run's source hash.
+
 ## Check the code
 
-```bash
-uv run pytest -q
-uv run ruff check src tests scripts benchmarks
-uv run ruff format --check src tests scripts benchmarks
-uv run mypy src/prism
+On Windows, run the complete pre-push check (locked install, lint, formatting, types, tests, wheel, and HTTP smoke):
+
+```powershell
+.\scripts\verify.ps1
 ```
 
-Deterministic tests need no network. The real semantic test runs when the model has been provisioned. The cluster test starts localhost subprocesses. In the Windows managed environment used here, use a unique project-local `--basetemp work/checks-<id> -o cache_dir=work/pytest-cache-<id>` to avoid ACL conflicts with old temporary directories.
+The same checks run in the [Ubuntu and Windows CI workflow](.github/workflows/ci.yml). [Heavy verification](.github/workflows/heavy-verification.yml) is manual and keeps expensive benchmarks out of normal pushes. The real semantic test runs when the model has been provisioned; `verify.ps1` creates a unique repository-local pytest temp directory to avoid stale Windows temp-folder ACLs. The cluster test starts localhost subprocesses.
 
 Read [architecture](docs/architecture.md), [storage format](docs/storage-format.md), [query language](docs/query-language.md), [relevance](docs/relevance.md), and [limitations](docs/limitations.md). Future improvements are listed as stretch work in the spec.
 

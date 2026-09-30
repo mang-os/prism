@@ -1,10 +1,11 @@
 # HTTP API
 
-Serve locally with `prism --config examples/local.yaml serve`. FastAPI exposes the interactive schema at `/docs` and metrics at `/metrics`. The checked-in [OpenAPI JSON](openapi.json) is generated from the implementation.
+Serve locally with `uv run prism --config examples/local.yaml serve`. FastAPI exposes the interactive schema at `/docs`, a minimal search page at `/demo`, and metrics at `/metrics`. The checked-in [OpenAPI JSON](openapi.json) is generated from the implementation; `/demo` is intentionally omitted from that schema.
 
 | Method | Path | Purpose |
 | --- | --- | --- |
 | `GET` | `/health/live`, `/health/ready`, `/metrics` | Process, snapshot/provider status, telemetry |
+| `GET` | `/demo` | Search form, mode selector, ranked results, and coverage |
 | `POST` | `/v1/indexes` | Create a local index: `{"name":"demo","semantic":true}` |
 | `GET` | `/v1/indexes/{name}/stats` | Accepted/visible revision, live documents, segment bytes |
 | `POST` | `/v1/indexes/{name}/documents:bulk` | Atomic upsert batch: `{"documents":[...]}` |
