@@ -82,7 +82,9 @@ def run_cluster(args, settings):
                 children.append(
                     subprocess.Popen(
                         [sys.executable, "-m", "prism", "--config", str(config), "serve"],
-                        creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
+                        creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0)
+                        if os.name == "nt"
+                        else 0,
                     )
                 )
         provider = provider_for(settings) if topology["epoch"]["config"]["dimension"] else None

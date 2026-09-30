@@ -6,6 +6,7 @@ dist/
 *.egg-info/
 __pycache__/
 .pytest_cache/
+.pytest_tmp/
 .hypothesis/
 .mypy_cache/
 .ruff_cache/
