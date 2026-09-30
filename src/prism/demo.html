@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prism search demo</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.5 system-ui, sans-serif; background: #f6f7f9; color: #17212b; }
+    body { max-width: 920px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin-bottom: .2rem; }
+    p { margin-top: .3rem; }
+    form, article, .status { background: white; border: 1px solid #dce2e8; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+    .row { display: flex; gap: .7rem; flex-wrap: wrap; align-items: end; }
+    label { display: grid; gap: .3rem; flex: 1; min-width: 12rem; font-weight: 600; }
+    input, select, button { font: inherit; padding: .65rem; border-radius: 7px; border: 1px solid #9ca9b7; }
+    input { width: 100%; box-sizing: border-box; }
+    button { cursor: pointer; background: #174ea6; color: white; border-color: #174ea6; }
+    button:disabled { opacity: .6; cursor: wait; }
+    .examples button { background: white; color: #174ea6; margin: .2rem; }
+    .muted { color: #526170; }
+    .score { font-variant-numeric: tabular-nums; }
+    h2, h3 { margin-bottom: .2rem; }
+    article p { margin: .3rem 0; }
+    #error { color: #a21d21; }
+  </style>
+</head>
+<body>
+  <h1>Prism search demo</h1>
+  <p class="muted">Search your indexed documents with keywords, typo tolerance, or local semantic retrieval. Scores are ranking signals, not confidence percentages.</p>
+  <form id="search-form">
+    <div class="row">
+      <label>Index name <input id="index" value="demo" required pattern="[A-Za-z0-9_-]+" aria-label="Index name"></label>
+      <label>Search query <input id="query" value="bluetooh hedphones" required aria-label="Search query"></label>
+      <label>Mode
+        <select id="mode">
+          <option value="lexical">Lexical</option>
+          <option value="semantic">Semantic</option>
+          <option value="hybrid" selected>Hybrid</option>
+        </select>
+      </label>
+      <button id="submit" type="submit">Search</button>
+    </div>
+  </form>
+  <div class="examples" aria-label="Example queries">
+    Try:
+    <button type="button" data-query="bluetooh hedphones">bluetooh hedphones</button>
+    <button type="button" data-query="wireless earphones">wireless earphones</button>
+    <button type="button" data-query="something to block noise while travelling">something to block noise while travelling</button>
+  </div>
+  <p id="error" role="alert"></p>
+  <section class="status" aria-live="polite">
+    <strong>Cluster status:</strong> <span id="health">Checking…</span><br>
+    <span id="coverage" class="muted">Run a search to see shard coverage.</span>
+  </section>
+  <main id="results" aria-live="polite"></main>
+  <script>
+    const form = document.querySelector('#search-form');
+    const results = document.querySelector('#results');
+    const error = document.querySelector('#error');
+    const coverage = document.querySelector('#coverage');
+    const submit = document.querySelector('#submit');
+    async function checkHealth() {
+      try {
+        const response = await fetch('/health/ready');
+        const data = await response.json();
+        document.querySelector('#health').textContent = data.status + (data.epoch ? ' · epoch ' + data.epoch : '');
+      } catch (cause) {
+        document.querySelector('#health').textContent = 'Unavailable';
+      }
+    }
+    async function search(event) {
+      event.preventDefault();
+      error.textContent = '';
+      results.replaceChildren();
+      submit.disabled = true;
+      const name = document.querySelector('#index').value.trim();
+      const mode = document.querySelector('#mode').value;
+      try {
+        const response = await fetch('/v1/indexes/' + encodeURIComponent(name) + '/search', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ q: document.querySelector('#query').value, mode, top_k: 10, timeout_ms: 5000, explain: true })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Search failed');
+        coverage.textContent = `Coverage ${data.coverage.successful}/${data.coverage.total} shards · ${data.partial ? 'partial results' : 'complete results'} · ${data.executed_mode} · ${Math.round(data.took_ms)} ms`;
+        const heading = document.createElement('h2');
+        heading.textContent = `${data.hits.length} ranked results`;
+        results.append(heading);
+        for (const [rank, hit] of data.hits.entries()) {
+          const card = document.createElement('article');
+          const title = document.createElement('h3');
+          title.textContent = `${rank + 1}. ${hit.document.title}`;
+          const detail = document.createElement('p');
+          detail.className = 'muted score';
+          detail.textContent = `ID ${hit.id} · ${hit.document.kind} · score ${Number(hit.score).toFixed(4)}`;
+          const body = document.createElement('p');
+          body.textContent = hit.document.body || '';
+          card.append(title, detail, body);
+          if (hit.explanation) {
+            const explanation = document.createElement('p');
+            explanation.className = 'muted';
+            const ranks = hit.explanation.branch_ranks || {};
+            const parts = [];
+            if (ranks.lexical) parts.push(`lexical rank ${ranks.lexical}`);
+            if (ranks.semantic) parts.push(`semantic rank ${ranks.semantic}`);
+            if (hit.explanation.bm25?.length) parts.push('keyword match');
+            if (hit.explanation.cosine != null) parts.push(`cosine ${Number(hit.explanation.cosine).toFixed(3)}`);
+            explanation.textContent = parts.join(' · ');
+            card.append(explanation);
+          }
+          results.append(card);
+        }
+      } catch (cause) {
+        error.textContent = cause.message;
+      } finally {
+        submit.disabled = false;
+        checkHealth();
+      }
+    }
+    form.addEventListener('submit', search);
+    document.querySelectorAll('[data-query]').forEach(button => button.addEventListener('click', () => {
+      document.querySelector('#query').value = button.dataset.query;
+      form.requestSubmit();
+    }));
+    checkHealth();
+  </script>
+</body>
+</html>

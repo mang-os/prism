@@ -6,7 +6,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -153,6 +153,10 @@ def create_app(settings=None, provider=None):
             index.close()
 
     app = FastAPI(title="Prism", version="0.1.0", lifespan=lifespan)
+
+    @app.get("/demo", include_in_schema=False, response_class=HTMLResponse)
+    async def demo():
+        return HTMLResponse((Path(__file__).with_name("demo.html")).read_text(encoding="utf-8"))
 
     @app.middleware("http")
     async def body_limit(request, call_next):

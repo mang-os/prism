@@ -20,6 +20,8 @@ def main():
         )
         with TestClient(create_app(settings)) as client:
             assert client.get("/health/live").status_code == 200
+            demo = client.get("/demo")
+            assert demo.status_code == 200 and "Prism search demo" in demo.text
             assert client.post("/v1/indexes", json={"name": "smoke"}).status_code == 201
             documents = [
                 {
