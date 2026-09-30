@@ -12,6 +12,14 @@ Prism is an educational search engine for products, services, and documents. It 
 | Distributed queries | Three static shards, one snapshot replica each | Real-process failover test |
 | External baseline | OpenSearch BM25 on SciFact | [Benchmark status](docs/benchmark-report.md) |
 
+## Watch the demo
+
+[![Prism search demo: a misspelled query retrieves Bluetooth earbuds](docs/media/prism-launch.jpg)](docs/media/prism-launch.mp4)
+
+[Watch the 22-second video](docs/media/prism-launch.mp4) for typo-tolerant and semantic search, measured SciFact relevance, and explicit shard coverage. The video recreates the project's `/demo` interface; the results shown are documented in the [benchmark report](docs/benchmark-report.md) and [operations guide](docs/operations.md).
+
+Music: [“Happy Beats & Business Moves Vol. 12”](https://ende.app/en/song/12881-happy-beats-business-moves-vol-12) by Sascha Ende, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## How it works
 
 ```text
